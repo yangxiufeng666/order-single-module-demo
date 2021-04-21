@@ -1,0 +1,22 @@
+spring:
+  config:
+    use-legacy-processing: true
+  profiles:
+    active: "dev"
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    locale: zh_CN
+    time-zone: GMT+8
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+  config: classpath:logback-spring.xml
+mybatis:
+  mapper-locations: classpath:mybatis/*.xml
+  configuration:
+    log-impl: com.dsy.order.infrastructure.config.MybatisLogger
+log:
+  level: INFO
+  platform: sunshine
+  env: dev
