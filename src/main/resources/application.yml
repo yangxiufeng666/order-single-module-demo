@@ -1,8 +1,6 @@
 spring:
-  config:
-    use-legacy-processing: true
   profiles:
-    active: "dev"
+    active: dev
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     locale: zh_CN
