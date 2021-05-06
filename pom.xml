@@ -18,6 +18,7 @@
         <sunshine-core.version>1.0.2</sunshine-core.version>
         <sunshine-web.version>1.1.4</sunshine-web.version>
         <sunshine-util.version>1.0.0-SNAPSHOT</sunshine-util.version>
+        <sunshine-mybatis-log.version>1.0-SNAPSHOT</sunshine-mybatis-log.version>
         <guava.version>29.0-jre</guava.version>
     </properties>
 
@@ -41,7 +42,7 @@
         <dependency>
             <groupId>com.dsy.sunshine</groupId>
             <artifactId>sunshine-mybatis-log</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${sunshine-mybatis-log.version}</version>
         </dependency>
         <!--sunshine Components End-->
         <!--Spring Boot-->
