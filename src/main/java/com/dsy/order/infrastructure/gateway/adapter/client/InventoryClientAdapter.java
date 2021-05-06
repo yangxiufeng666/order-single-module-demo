@@ -13,6 +13,6 @@ import org.springframework.stereotype.Component;
 public class InventoryClientAdapter implements InventoryClient {
     @Override
     public Response check() {
-        return Response.buildSuccess();
+        return Response.success();
     }
 }

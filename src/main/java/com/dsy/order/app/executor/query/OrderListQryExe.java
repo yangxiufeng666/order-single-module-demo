@@ -28,7 +28,7 @@ public class OrderListQryExe {
         //convert to view object
         List<OrderVO> orderVOList = BeanConvertUtils.convertListTo(list , OrderVO::new, ((s, t) -> t.setOrderId(s.getId())));
 
-        return ResponseWithData.buildSuccess().setData(orderVOList);
+        return ResponseWithData.of(orderVOList);
 
     }
 

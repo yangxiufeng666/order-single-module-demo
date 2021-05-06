@@ -33,7 +33,7 @@ public class OrderWebController {
     @PostMapping("addOrder")
     public Response addOrder(@RequestBody @Valid OrderAddCmd cmd){
         orderAppService.addOrder(cmd);
-        return Response.buildSuccess();
+        return Response.success();
     }
 
     @GetMapping("listOrder")
