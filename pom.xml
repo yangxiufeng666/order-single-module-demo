@@ -38,6 +38,11 @@
             <artifactId>sunshine-util</artifactId>
             <version>${sunshine-util.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.dsy.sunshine</groupId>
+            <artifactId>sunshine-mybatis-log</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <!--sunshine Components End-->
         <!--Spring Boot-->
         <dependency>

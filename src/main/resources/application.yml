@@ -13,7 +13,7 @@ logging:
 mybatis:
   mapper-locations: classpath:mybatis/*.xml
   configuration:
-    log-impl: com.dsy.order.infrastructure.config.MybatisLogger
+    log-impl: com.dsy.sunshine.mybatis.log.SunshineMybatisLogger
 log:
   level: INFO
   platform: sunshine
