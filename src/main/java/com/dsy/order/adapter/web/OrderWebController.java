@@ -4,8 +4,10 @@ import com.dsy.order.app.service.OrderAppService;
 import com.dsy.order.client.command.OrderAddCmd;
 import com.dsy.order.client.query.OrderListQry;
 import com.dsy.order.client.vo.OrderVO;
+import com.dsy.order.domain.exception.AddError;
 import com.dsy.sunshine.core.Response;
 import com.dsy.sunshine.core.ResponseWithData;
+import com.dsy.sunshine.web.exception.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -38,6 +41,10 @@ public class OrderWebController {
 
     @GetMapping("listOrder")
     public ResponseWithData<List<OrderVO>> listOrder(@Valid OrderListQry qry){
+        if ( true ){
+            throw new BusinessException(new AddError(4010, "查询异常"));
+        }
+
         return orderAppService.listOrder(qry);
     }
 }
