@@ -11,3 +11,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 log:
   env: dev
+sunshine:
+  authorize:
+    token:
+      secret: dadadada
+    white-url:
+      - /userinfo
+      - /order
+    strip-prefix: 2
