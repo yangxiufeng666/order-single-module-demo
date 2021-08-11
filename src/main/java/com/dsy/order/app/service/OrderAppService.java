@@ -6,7 +6,7 @@ import com.dsy.order.app.executor.query.OrderListQryExe;
 import com.dsy.order.client.command.OrderAddCmd;
 import com.dsy.order.client.query.OrderListQry;
 import com.dsy.order.client.vo.OrderVO;
-import com.dsy.sunshine.core.ResponseWithData;
+import com.dsy.sunshine.core.Response;
 import com.dsy.sunshine.web.log.annotation.SysLog;
 import com.dsy.sunshine.web.log.enums.BusinessType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +36,7 @@ public class OrderAppService {
     }
 
     @SysLog(title = "查询订单列表", type = BusinessType.QUERY)
-    public ResponseWithData<List<OrderVO>> listOrder(OrderListQry qry) {
+    public Response<List<OrderVO>> listOrder(OrderListQry qry) {
         return orderListQryExe.executor(qry);
     }
 }

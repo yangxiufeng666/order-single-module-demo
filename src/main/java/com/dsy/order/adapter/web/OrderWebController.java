@@ -6,7 +6,6 @@ import com.dsy.order.client.query.OrderListQry;
 import com.dsy.order.client.vo.OrderVO;
 import com.dsy.order.domain.exception.AddError;
 import com.dsy.sunshine.core.Response;
-import com.dsy.sunshine.core.ResponseWithData;
 import com.dsy.sunshine.web.exception.*;
 import com.dsy.sunshine.web.log.annotation.SysLog;
 import com.dsy.sunshine.web.log.enums.BusinessType;
@@ -40,13 +39,13 @@ public class OrderWebController {
     private OrderAppService orderAppService;
 
     @PostMapping("addOrder")
-    public Response addOrder(@RequestBody @Valid OrderAddCmd cmd){
+    public Response<Void> addOrder(@RequestBody @Valid OrderAddCmd cmd){
         orderAppService.addOrder(cmd);
         return Response.success();
     }
 
     @GetMapping("listOrder")
-    public ResponseWithData<List<OrderVO>> listOrder(@Valid OrderListQry qry){
+    public Response<List<OrderVO>> listOrder(@Valid OrderListQry qry){
         return orderAppService.listOrder(qry);
     }
 }
